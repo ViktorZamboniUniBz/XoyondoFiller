@@ -1,5 +1,4 @@
 import time
-#from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -7,7 +6,6 @@ import undetected_chromedriver as uc
 import selenium.webdriver.support.expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 import re
-#import pyautogui
 import random
 
 
@@ -40,7 +38,6 @@ try:
             links = message.find_elements(By.TAG_NAME, "a")
             xoyondo_links = [link.get_attribute('href') for link in links if "xoyondo.com" in link.get_attribute('href')]
         if xoyondo_links:
-            print(f"Messaggio {i} contiene un link Xoyondo sas:")
             linkXoyondo = xoyondo_links[-1]
             trovato = True
         elif xoyondo_pattern.search(message_text):  # Verifica link Xoyondo nel testo

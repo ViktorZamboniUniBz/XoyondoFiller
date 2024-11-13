@@ -5,7 +5,7 @@ from driver_manager import DriverManager
 from whatsapp_automation import WhatsappAutomation
 from xoyondo_automation import XoyondoAutomation
 from utils import create_xoyondo_pattern
-from config import LINK_WHATSAPP, XOYONDO_PATTERN, PROFILE_DIRECTORY, USER_DATA_DIR
+from config import LINK_WHATSAPP, PROFILE_DIRECTORY, USER_DATA_DIR
 
 def main():
     # Setup driver
