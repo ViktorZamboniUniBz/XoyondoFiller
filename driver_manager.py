@@ -24,7 +24,7 @@ class DriverManager:
         if self.driver:
             self.driver.quit()
             
-    def take_screenshot(self, save_path='C:/Users/Viktor/Documents/niga/XoyondoFiller/screenshots', screenshot_name='screenshot.png'):
+    def take_screenshot(self, save_path='C:\\Users\\User\\Documents\\diagrammaEr\\XoyondoFiller\\screenshots', screenshot_name='screenshot.png'):
         # Create a dir if it doesn't exist
         os.makedirs(save_path, exist_ok=True)
         

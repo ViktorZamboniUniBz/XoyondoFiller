@@ -17,7 +17,7 @@ class WhatsappAutomation:
         chat_button = self.wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
         chat_button.click()
 
-    def get_last_messages(self, chat_xpath, message_xpath, num_messages=5):
+    def get_last_messages(self, chat_xpath, message_xpath, num_messages=3):
         # Find the chat and scroll to it
         chat = self.driver.find_element(By.XPATH, chat_xpath)
         self.driver.execute_script("arguments[0].scrollIntoView(false);", chat)
