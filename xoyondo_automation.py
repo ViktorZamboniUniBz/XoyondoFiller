@@ -8,10 +8,12 @@ class XoyondoAutomation:
         self.driver = driver
 
     def open_xoyondo(self, link):
+        # Open the Xoyondo link and wait
         self.driver.get(link)
         time.sleep(random.uniform(2, 5))
 
     def fill_xoyondo_form(self, name):
+        # Fill the Xoyondo form with the given name
         input_name = self.driver.find_element(By.NAME, "name")
         input_name.send_keys(name)
         self.driver.execute_script('document.querySelector("input[type=checkbox]").click()')

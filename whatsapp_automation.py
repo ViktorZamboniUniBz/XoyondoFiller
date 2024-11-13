@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class WhatsappAutomation:
     def __init__(self, driver, wait_time=5):
+        # Set the driver and the wait time
         self.driver = driver
         self.wait = WebDriverWait(driver, wait_time)
     
@@ -13,18 +14,22 @@ class WhatsappAutomation:
         self.driver.get(link)
 
     def click_chat(self, xpath):
+        # Find the chat button and click it
         chat_button = self.wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
         chat_button.click()
 
     def get_last_messages(self, chat_xpath, message_xpath, num_messages=5):
+        # Find the chat and scroll to it
         chat = self.driver.find_element(By.XPATH, chat_xpath)
         self.driver.execute_script("arguments[0].scrollIntoView(false);", chat)
         time.sleep(2)
         
+        # Find the last messages
         messages = chat.find_elements(By.XPATH, message_xpath)[-num_messages:]
         return messages
 
     def find_xoyondo_links(self, messages, pattern):
+        # Find Xoyondo links in the messages
         links = []
         for message in messages:
             message_text = message.text
