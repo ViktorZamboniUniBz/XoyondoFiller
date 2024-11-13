@@ -1,4 +1,3 @@
-# xoyondo_automation.py
 import time
 import random
 from selenium.webdriver.common.by import By

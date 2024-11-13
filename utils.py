@@ -1,4 +1,3 @@
-# utils.py
 import re
 
 def create_xoyondo_pattern():

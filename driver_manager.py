@@ -1,4 +1,3 @@
-# driver_manager.py
 import undetected_chromedriver as uc
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
