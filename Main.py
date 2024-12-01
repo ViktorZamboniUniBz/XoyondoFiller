@@ -1,3 +1,5 @@
+import random
+import time
 from driver_manager import DriverManager
 from whatsapp_automation import WhatsappAutomation
 from xoyondo_automation import XoyondoAutomation
@@ -31,6 +33,7 @@ def main():
             xoyondo_links = whatsapp_automation.find_xoyondo_links(messages, pattern)
         print(f"Found Xoyondo link(s): {xoyondo_links}")
         xoyondo_automation.open_xoyondo(xoyondo_links[-1])
+        time.sleep(random.uniform(3, 6))
         xoyondo_automation.fill_xoyondo_form("Viktor")
             
 

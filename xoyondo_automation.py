@@ -7,9 +7,8 @@ class XoyondoAutomation:
         self.driver = driver
 
     def open_xoyondo(self, link):
-        # Open the Xoyondo link and wait
+        # Open the Xoyondo link
         self.driver.get(link)
-        time.sleep(random.uniform(2, 5))
 
     def fill_xoyondo_form(self, name):
         # Fill the Xoyondo form with the given name
