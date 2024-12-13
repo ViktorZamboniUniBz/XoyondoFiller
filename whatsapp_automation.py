@@ -1,12 +1,13 @@
 import json
 import os
 import time
+from config import HISTORY_FILE_PATH
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 class WhatsappAutomation:
-    def __init__(self, driver, wait_time=5, history_file="link_history.json"):
+    def __init__(self, driver, wait_time=5, history_file=HISTORY_FILE_PATH):
         self.driver = driver
         self.wait = WebDriverWait(driver, wait_time)
         self.history_file = history_file
