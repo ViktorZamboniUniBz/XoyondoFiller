@@ -1,14 +1,15 @@
-import time
-import random
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
 
 class XoyondoAutomation:
-    def __init__(self, driver):
+    def __init__(self, driver, wait_time=5):
         self.driver = driver
+        self.wait = WebDriverWait(driver, wait_time)
 
     def open_xoyondo(self, link):
-        # Open the Xoyondo link
         self.driver.get(link)
+        self.wait.until(EC.presence_of_element_located((By.NAME, "name")))
 
     def fill_xoyondo_form(self, name):
         # Fill the Xoyondo form with the given name
