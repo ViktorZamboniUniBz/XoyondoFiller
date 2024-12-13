@@ -2,5 +2,4 @@ __pycache__/
 screenshots/
 link_history.json
 dist/
-build/
 build/Main
