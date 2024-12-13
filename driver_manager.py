@@ -16,7 +16,6 @@ class DriverManager:
         options.add_argument(f"--profile-directory={self.profile_directory}")
         options.add_argument(f"--user-data-dir={self.user_data_dir}")
         
-        # Setup the driver
         self.driver = uc.Chrome(service=Service(ChromeDriverManager().install()), options=options)
         return self.driver
 

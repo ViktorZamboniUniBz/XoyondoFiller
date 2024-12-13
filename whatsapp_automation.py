@@ -42,7 +42,7 @@ class WhatsappAutomation:
         self.wait.until(EC.presence_of_element_located((By.ID, "pane-side")))
 
     def click_chat(self, xpath):
-        # Find the chat button and click it
+        # Find the chat button and click
         chat_button = self.wait.until(EC.presence_of_element_located((By.XPATH, xpath)))
         chat_button.click()
 
